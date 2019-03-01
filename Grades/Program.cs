@@ -15,17 +15,15 @@ namespace Grades
             book.AddGrade(89.5f);
             book.AddGrade(75);
 
-            GradeStatistics stats = book.ComputeStatistics();
-           // Console.WriteLine(stats.AverageGrade);
-           // Console.WriteLine(stats.HighestGrade);
-           // Console.WriteLine(stats.LowestGrade);
+            GradeStatistics gs = book.ComputeStatistics();
+            float avg = gs.AverageGrade;
 
-             if(stats.AverageGrade>70)
-             {
+            if(avg>70.0)
+            {
                 Console.WriteLine("Pass");
-             }
-             else
-             {
+            }
+            else
+            {
                 Console.WriteLine("Fail");
             }
         
