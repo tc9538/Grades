@@ -33,5 +33,17 @@ namespace Grades.Tests
             Assert.AreEqual(10, result.LowestGrade);
         }
 
+        [TestMethod]
+        public void ComputeAverageGrade()
+        {
+            GradeBook gb = new GradeBook();
+            gb.AddGrade(91);
+            gb.AddGrade(89.5f);
+            gb.AddGrade(75);
+
+            GradeStatistics result = gb.ComputeStatistics();
+            Assert.AreEqual(85.16, result.AverageGrade, 0.01);
+        }
+
     }
 }
